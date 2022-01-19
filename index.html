@@ -8,32 +8,31 @@
     <title>brincando</title>
     <h1>Lista de tarefas</h1>
     <ul>
-    <li>oi</li>
-    <li>tchau</li>
-    <li>fui</li>
+        <li>oi</li>
+        <li>tchau</li>
+        <li>fui</li>
     </ul>
-    <input /> 
+    <input />
 </head>
 
 <body>
     <button onclick="add()">Executar</button>
 
     <script>
-        function add()
-{
-        const texto = document.querySelector("input").value
-        console.log(texto)
-       
-        const li = document.createElement("li")
+        function add() {
+            const texto = document.querySelector("input").value
+            console.log(texto)
 
-        li.innerText = texto
-        console.log(li)
+            const li = document.createElement("li")
 
-        const ul = document.querySelector("ul")
-        ul.appendChild(li)
+            li.innerText = texto
+            console.log(li)
 
-        document.querySelector("input").value =""
-    }
+            const ul = document.querySelector("ul")
+            ul.appendChild(li)
+
+            document.querySelector("input").value = ""
+        }
 
     </script>
 </body>
