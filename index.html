@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>brincando</title>
     <h1>Lista de tarefas</h1>
+    <ul>
     <li>oi</li>
     <li>tchau</li>
     <li>fui</li>
-    <input /> <button>confirmar</button>
+    </ul>
+    <input /> 
 </head>
+
 <body>
+    <button onclick="add()">Executar</button>
+
     <script>
         function add()
-        const texto = document.querySelectorAll("input").value
+{
+        const texto = document.querySelector("input").value
         console.log(texto)
+       
+        const li = document.createElement("li")
 
-        function li(){
-            const li = document.createElement("li")
-            console.log("li")
-        }
+        li.innerText = texto
+        console.log(li)
 
+        const ul = document.querySelector("ul")
+        ul.appendChild(li)
 
+        document.querySelector("input").value =""
+    }
 
     </script>
 </body>
+
 </html>
